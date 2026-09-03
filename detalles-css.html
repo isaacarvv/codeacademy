@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Guía abierta de CSS Grid y Flexbox"><title>CSS Grid y Flexbox Pro | CodeAcademy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-css">Buscar tecnología</label><input id="buscar-css" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div></header>
+  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">CSS Layouts</p><a class="enlace-activo" href="#bases-css">Módulo 1: Layout</a><a href="#flexbox">Lección 1: Flexbox</a><a href="#grid">Lección 2: CSS Grid</a><a href="#practica-css">Práctica guiada</a></nav></aside>
+    <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="bases-css"><p class="eyebrow">RUTA FRONTEND · LECCIÓN 1</p><h1>CSS Grid y Flexbox Pro</h1><p class="intro-leccion">Los sistemas de layout modernos te permiten ordenar contenido de forma flexible, consistente y adaptable a cualquier pantalla.</p>
+      <h2 id="flexbox">Cuándo usar Flexbox</h2><p>Flexbox es ideal para distribuir elementos en una sola dirección: una fila o una columna. Piensa en una barra de navegación, un grupo de botones o una tarjeta.</p><ul><li>Usa <code>display: flex</code> para activar el contexto flexible.</li><li>Controla la alineación con <code>justify-content</code> y <code>align-items</code>.</li><li>Permite que los elementos se adapten usando <code>flex-wrap</code>.</li></ul>
+      <h2 id="grid">Una cuadrícula adaptable</h2><p>CSS Grid trabaja en dos dimensiones y es perfecto para galerías, dashboards y secciones de tarjetas.</p>
+      <pre><code><span class="codigo-comentario">/* tarjetas.css */</span>
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}</code></pre>
+      <aside class="nota-leccion"><strong>Idea clave</strong><p>El patrón <code>auto-fit</code> con <code>minmax()</code> crea columnas responsivas sin escribir media queries adicionales.</p></aside>
+      <section class="practica-leccion" id="practica-css"><div><p class="eyebrow">PRACTICA</p><h2>Diseña una cuadrícula</h2><p>Prueba cambiar el tamaño mínimo de las columnas y observa cómo afectaría el layout.</p></div><label for="editor-css" class="sr-only">Editor de práctica CSS</label><textarea id="editor-css" spellcheck="false">.mi-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}</textarea></section>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#grid">Siguiente: CSS Grid →</a></nav>
+    </article></main></div>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+</body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos de desarrollo web en CodeAcademy">
+  <title>CodeAcademy | Cursos de Desarrollo Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="cabecera-prueba">
+    <a class="logo-prueba" href="index.html#inicio" aria-label="Ir al inicio de CodeAcademy">&lt;CodeAcademy /&gt;</a>
+    <nav class="navegacion-prueba" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+    </nav>
+    <div class="acciones-prueba">
+      <form class="busqueda-prueba" action="cursos.html" method="get" role="search">
+        <label class="sr-only" for="buscar-tecnologia">Buscar tecnología</label>
+        <input id="buscar-tecnologia" name="q" type="search" placeholder="Buscar...">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+      <a class="boton-unirme" href="cursos.html">Explorar Cursos</a>
+    </div>
+  </header>
+
+<main class="contenedor-cursos catalogo-cursos-v2">
+    <aside class="sidebar-filtros filtros-v2">
+      <div class="encabezado-filtros-v2">
+        <h1><span aria-hidden="true">☷</span> Filtros</h1>
+        <button type="button">Limpiar todo</button>
+      </div>
+
+      <fieldset class="grupo-filtros">
+        <legend>Tipo</legend>
+        <label><input type="checkbox" checked> <span>Cursos</span></label>
+        <label><input type="checkbox"> <span>Rutas</span></label>
+      </fieldset>
+
+      <fieldset class="grupo-filtros">
+        <legend>Nivel</legend>
+        <label><input type="checkbox"> <span>Principiante</span></label>
+        <label><input type="checkbox" checked> <span>Intermedio</span></label>
+        <label><input type="checkbox"> <span>Avanzado</span></label>
+      </fieldset>
+
+      <fieldset class="grupo-filtros">
+        <legend>Tecnología</legend>
+        <label><input type="checkbox" checked> <span>JavaScript</span></label>
+        <label><input type="checkbox"> <span>React</span></label>
+        <label><input type="checkbox"> <span>CSS</span></label>
+        <label><input type="checkbox"> <span>Next.js</span></label>
+      </fieldset>
+
+      <fieldset class="grupo-filtros">
+        <legend>Duración promedio</legend>
+        <label><input type="checkbox"> <span>Menos de 5 horas</span></label>
+        <label><input type="checkbox"> <span>5–10 horas</span></label>
+        <label><input type="checkbox"> <span>Más de 10 horas</span></label>
+      </fieldset>
+    </aside>
+
+    <section class="catalogo-grid catalogo-v2" aria-labelledby="titulo-catalogo">
+      <div class="barra-catalogo barra-catalogo-v2">
+        <label class="busqueda-interna" for="buscar-curso">
+          <span class="sr-only">Buscar cursos</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="buscar-curso" type="search" placeholder="¿Qué quieres aprender? Escribe para buscar...">
+        </label>
+        <label class="sr-only" for="ordenar">Ordenar cursos</label>
+        <select id="ordenar">
+          <option>Más relevantes</option>
+          <option>Más recientes</option>
+          <option>Menor duración</option>
+          <option>Mayor duración</option>
+        </select>
+      </div>
+
+      <h2 class="sr-only" id="titulo-catalogo">Catálogo de cursos</h2>
+      <div class="grid-catalogo-cursos grid-catalogo-v2">
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-js">JS</span>
+            <div><span class="nivel-v2 nivel-intermedio">● Intermedio</span><span class="duracion-v2">◷ 12h</span></div>
+          </div>
+          <h3>JavaScript Foundations</h3>
+          <p>Domina los conceptos esenciales de JavaScript moderno: variables, funciones, eventos y DOM.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">DR</span><span>Diego Rojas</span><strong>Gratis</strong></div>
+          <a href="detalles-javascript.html" aria-label="Abrir lección de JavaScript Foundations"></a>
+        </article>
+
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-react">{ }</span>
+            <div><span class="nivel-v2 nivel-avanzado">● Avanzado</span><span class="duracion-v2">◷ 18h</span></div>
+          </div>
+          <h3>React Performance</h3>
+          <p>Profundiza en renderizado, memoización y patrones para crear aplicaciones React rápidas.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">VR</span><span>Valentina Ruiz</span><strong>Gratis</strong></div>
+          <a href="detalles-react-typescript.html" aria-label="Abrir lección de React Performance"></a>
+        </article>
+
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-ts">TS</span>
+            <div><span class="nivel-v2 nivel-intermedio">● Intermedio</span><span class="duracion-v2">◷ 8h</span></div>
+          </div>
+          <h3>TypeScript Essentials</h3>
+          <p>Incorpora tipos estáticos, interfaces y genéricos a tus proyectos JavaScript.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">LH</span><span>Luis Hernández</span><strong>Gratis</strong></div>
+          <a href="detalles-react-typescript.html" aria-label="Abrir lección de TypeScript Essentials"></a>
+        </article>
+
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-html">5</span>
+            <div><span class="nivel-v2 nivel-principiante">● Principiante</span><span class="duracion-v2">◷ 7h</span></div>
+          </div>
+          <h3>HTML Semántico</h3>
+          <p>Aprende a escribir una estructura web accesible, clara y preparada para crecer.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">AT</span><span>Ana Torres</span><strong>Gratis</strong></div>
+          <a href="detalles-html.html" aria-label="Abrir lección de HTML Semántico"></a>
+        </article>
+
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-css">3</span>
+            <div><span class="nivel-v2 nivel-principiante">● Principiante</span><span class="duracion-v2">◷ 11h</span></div>
+          </div>
+          <h3>CSS Grid y Flexbox Pro</h3>
+          <p>Diseña layouts modernos, responsivos y mantenibles con las herramientas nativas de CSS.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">SC</span><span>Sofía Castillo</span><strong>Gratis</strong></div>
+          <a href="detalles-css.html" aria-label="Abrir lección de CSS Grid y Flexbox Pro"></a>
+        </article>
+
+        <article class="tarjeta-catalogo-v2">
+          <div class="curso-cabecera-v2">
+            <span class="logo-curso-v2 logo-next">▲</span>
+            <div><span class="nivel-v2 nivel-avanzado">● Avanzado</span><span class="duracion-v2">◷ 18h</span></div>
+          </div>
+          <h3>Master en Next.js 14</h3>
+          <p>Construye aplicaciones fullstack modernas con App Router y Server Components.</p>
+          <div class="curso-pie-v2"><span class="instructor-v2">LM</span><span>Laura Méndez</span><strong>Gratis</strong></div>
+          <a href="detalles-curso.html" aria-label="Abrir lección de Master en Next.js 14"></a>
+        </article>
+      </div>
+
+      <nav class="paginacion paginacion-v2" aria-label="Paginación de cursos">
+        <a href="#pagina-anterior" aria-label="Página anterior">‹</a>
+        <a class="pagina-activa" href="#pagina-1" aria-current="page">1</a>
+        <a href="#pagina-2">2</a>
+        <a href="#pagina-3">3</a>
+        <a href="#pagina-siguiente" aria-label="Página siguiente">›</a>
+      </nav>
+    </section>
+  </main>
+
+<footer class="pie-prueba">
+    <a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a>
+    <nav aria-label="Enlaces secundarios">
+      <a href="cursos.html">Documentación</a>
+      <a href="index.html#sobre-nosotros">Changelog</a>
+      <a href="index.html#sobre-nosotros">Política de privacidad</a>
+      <a href="index.html#sobre-nosotros">Términos de servicio</a>
+    </nav>
+    <p>© 2026 CodeAcademy. Build for the next generation of engineers.</p>
+  </footer>
+</body>
+</html>

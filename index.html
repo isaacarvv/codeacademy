@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeAcademy: cursos de desarrollo web para construir el stack del futuro.">
+  <title>CodeAcademy | Domina el Stack del Futuro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-inicio">
+  <header class="cabecera-prueba">
+    <a class="logo-prueba" href="#inicio" aria-label="Ir al inicio de CodeAcademy">&lt;CodeAcademy /&gt;</a>
+
+    <nav class="navegacion-prueba" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#cursos">Cursos</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+    </nav>
+
+    <div class="acciones-prueba">
+      <form class="busqueda-prueba" action="cursos.html" method="get" role="search">
+        <label class="sr-only" for="buscar-tecnologia">Buscar tecnología</label>
+        <input id="buscar-tecnologia" name="q" type="search" placeholder="Buscar...">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+      <a class="boton-unirme" href="cursos.html">Explorar Cursos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-prueba" id="inicio">
+      <span class="codigo-flotante codigo-uno" aria-hidden="true">const access = 'open';</span>
+      <span class="codigo-flotante codigo-dos" aria-hidden="true">console.log('Hello world')</span>
+      <span class="codigo-flotante codigo-tres" aria-hidden="true">if (readyToLearn) { build() }</span>
+
+      <div class="hero-prueba-contenido">
+        <p class="badge-biblioteca"><span aria-hidden="true">♨</span> Librería 100% gratuita</p>
+        <h1>Domina el Stack del Futuro <span>— un camino claro hacia frontend</span></h1>
+        <p class="hero-prueba-descripcion">CodeAcademy es una biblioteca de cursos que te lleva desde el core HTML, CSS y JavaScript hasta React y las herramientas modernas. Cada curso es práctico, no solo lees, construyes.</p>
+        <div class="hero-prueba-acciones">
+          <a class="boton-menta" href="#rutas">Empezar a aprender <span aria-hidden="true">→</span></a>
+          <a class="boton-contorno" href="cursos.html">Explorar cursos <span aria-hidden="true">⌕</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-prueba beneficios-prueba" aria-label="Beneficios de CodeAcademy">
+      <article class="tarjeta-beneficio-prueba">
+        <span class="icono-beneficio-prueba icono-cian" aria-hidden="true">∞</span>
+        <h2>Siempre gratuito</h2>
+        <p>Accede a todas las lecciones sin pagos ni suscripciones.</p>
+      </article>
+      <article class="tarjeta-beneficio-prueba">
+        <span class="icono-beneficio-prueba icono-menta" aria-hidden="true">✪</span>
+        <h2>Aprendizaje abierto</h2>
+        <p>Consulta guías, ejemplos y ejercicios cuando los necesites.</p>
+      </article>
+      <article class="tarjeta-beneficio-prueba">
+        <span class="icono-beneficio-prueba icono-lila" aria-hidden="true">▣</span>
+        <h2>Proyectos reales</h2>
+        <p>Construye un portafolio sólido mientras aprendes.</p>
+      </article>
+    </section>
+
+    <section class="seccion-prueba rutas-prueba" id="rutas">
+      <div class="encabezado-rutas-prueba">
+        <p>¿Por dónde empezar?</p>
+        <h2>Elige el camino que mejor se adapte a ti</h2>
+      </div>
+      <div class="grid-rutas-prueba">
+        <article class="tarjeta-ruta-prueba ruta-design">
+          <span class="badge-ruta">Para creativos &amp; UI/UX</span>
+          <span class="marca-ruta" aria-hidden="true">◌</span>
+          <div>
+            <h3>Design to Code</h3>
+            <p>Un camino para creativos que quieren convertir sus ideas en código real y funcional.</p>
+          </div>
+        </article>
+        <article class="tarjeta-ruta-prueba ruta-javascript">
+          <span class="badge-ruta">Ya tienes experiencia</span>
+          <span class="marca-ruta" aria-hidden="true">{ }</span>
+          <div>
+            <h3>Deep Dive into JavaScript</h3>
+            <p>Conoces lo básico pero quieres dominar animaciones, features avanzadas y lógica compleja.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion-prueba cursos-prueba" id="cursos">
+      <div class="encabezado-cursos-prueba">
+        <h2>Cursos Destacados</h2>
+        <a href="cursos.html">Ver todos <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="grid-cursos-prueba">
+        <article class="tarjeta-curso-prueba">
+          <div class="meta-curso-prueba">
+            <span class="logo-tecnologia html">5</span>
+            <p><span>Principiante</span><span>◷ 7 hrs</span></p>
+          </div>
+          <h3>HTML Basics</h3>
+          <p>Fundamentos de HTML5: etiquetas, estructura, enlaces, imágenes y formularios para construir tu primera página.</p>
+          <a href="detalles-html.html" aria-label="Abrir lección de HTML Basics"></a>
+        </article>
+        <article class="tarjeta-curso-prueba">
+          <div class="meta-curso-prueba">
+            <span class="logo-tecnologia javascript">JS</span>
+            <p><span>Intermedio</span><span>◷ 12 hrs</span></p>
+          </div>
+          <h3>JavaScript Foundations</h3>
+          <p>Tu inicio en programación: variables, funciones, condiciones, eventos y el DOM. Construye interactividad.</p>
+          <a href="detalles-javascript.html" aria-label="Abrir lección de JavaScript Foundations"></a>
+        </article>
+        <article class="tarjeta-curso-prueba">
+          <div class="meta-curso-prueba">
+            <span class="logo-tecnologia css">3</span>
+            <p><span>Principiante</span><span>◷ 11 hrs</span></p>
+          </div>
+          <h3>CSS Essentials</h3>
+          <p>Lo esencial de estilos: colores, fuentes, espaciado, layout boxes, posicionamiento y responsive design.</p>
+          <a href="detalles-css.html" aria-label="Abrir lección de CSS Essentials"></a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie-prueba">
+    <a class="logo-prueba" href="#inicio">CodeAcademy</a>
+    <nav aria-label="Enlaces secundarios">
+      <a href="#documentacion">Documentación</a>
+      <a href="#changelog">Changelog</a>
+      <a href="#privacidad">Política de privacidad</a>
+      <a href="#terminos">Términos de servicio</a>
+    </nav>
+    <p>© 2026 CodeAcademy. Build for the next generation of engineers.</p>
+  </footer>
+</body>
+</html>

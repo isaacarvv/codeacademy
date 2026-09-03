@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Curso abierto de HTML semántico y accesible"><title>HTML Semántico | CodeAcademy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-html">Buscar tecnología</label><input id="buscar-html" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div></header>
+  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">HTML Semántico</p><a class="enlace-activo" href="#html-esencial">Módulo 1: HTML esencial</a><a href="#landmarks">Lección 1: Landmarks</a><a href="#encabezados">Lección 2: Jerarquía</a><a href="#practica-html">Práctica guiada</a></nav></aside>
+    <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="html-esencial"><p class="eyebrow">RUTA FRONTEND · LECCIÓN 1</p><h1>HTML Semántico y Accesible</h1><p class="intro-leccion">HTML semántico describe el significado del contenido. Es la base para interfaces más claras, accesibles y fáciles de mantener.</p>
+      <h2 id="landmarks">Usa landmarks para estructurar</h2><p>Las etiquetas semánticas crean puntos de referencia que ayudan a las personas y a las tecnologías asistivas a recorrer la página.</p><ul><li><code>header</code> presenta la cabecera de una página o sección.</li><li><code>main</code> contiene el contenido principal y debe aparecer una sola vez.</li><li><code>nav</code>, <code>article</code>, <code>aside</code> y <code>footer</code> explican el propósito de cada bloque.</li></ul>
+      <h2 id="encabezados">Mantén una jerarquía lógica</h2><p>Los encabezados no se eligen por tamaño visual. Representan niveles de contenido, desde el título principal hasta las subsecciones.</p>
+      <pre><code><span class="codigo-comentario">&lt;!-- estructura semántica --&gt;</span>
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Guía de accesibilidad&lt;/h1&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Navegación por teclado&lt;/h2&gt;
+      &lt;p&gt;Todo control debe ser alcanzable.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+      <aside class="nota-leccion"><strong>Idea clave</strong><p>Antes de añadir ARIA, utiliza primero el elemento HTML nativo que describe correctamente lo que necesitas. La semántica nativa suele ser más robusta.</p></aside>
+      <section class="practica-leccion" id="practica-html"><div><p class="eyebrow">PRACTICA</p><h2>Convierte un bloque en una página semántica</h2><p>Reemplaza los <code>div</code> por elementos que describan el contenido.</p></div><label for="editor-html" class="sr-only">Editor de práctica HTML</label><textarea id="editor-html" spellcheck="false">&lt;header&gt;Mi blog&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Mi primer artículo&lt;/h1&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;2026&lt;/footer&gt;</textarea></section>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#encabezados">Siguiente: Jerarquía de títulos →</a></nav>
+    </article></main></div>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Curso abierto de JavaScript en CodeAcademy"><title>JavaScript desde Cero | CodeAcademy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-js">Buscar tecnología</label><input id="buscar-js" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div></header>
+  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">JavaScript</p><a class="enlace-activo" href="#bases-js">Módulo 1: Bases</a><a href="#variables">Lección 1: Variables</a><a href="#funciones">Lección 2: Funciones</a><a href="#practica-js">Práctica guiada</a></nav></aside>
+    <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="bases-js"><p class="eyebrow">RUTA FRONTEND · LECCIÓN 1</p><h1>JavaScript desde Cero</h1><p class="intro-leccion">JavaScript añade comportamiento a tus páginas. Con él puedes responder a clics, transformar datos y construir experiencias interactivas.</p>
+      <h2 id="variables">Guarda información con variables</h2><p>Una variable es un nombre que apunta a un valor. Usa <code>const</code> cuando no cambiará y <code>let</code> cuando sí necesitas actualizarlo.</p><ul><li><strong>const:</strong> crea referencias que no se reasignan.</li><li><strong>let:</strong> permite actualizar el valor más adelante.</li><li>Elige nombres claros que expliquen su propósito.</li></ul>
+      <h2 id="funciones">Agrupa instrucciones con funciones</h2><p>Las funciones evitan repetir código. Reciben datos, realizan una tarea y pueden devolver un resultado.</p>
+      <pre><code><span class="codigo-comentario">// saludo.js</span>
+const saludar = (nombre) =&gt; {
+  return `Hola, ${nombre}. ¡A programar!`;
+};
+
+const mensaje = saludar('Ada');
+console.log(mensaje);</code></pre>
+      <aside class="nota-leccion"><strong>Idea clave</strong><p>Una función debe hacer una cosa concreta. Cuando su nombre explica la acción, tu código se vuelve más fácil de leer y mantener.</p></aside>
+      <section class="practica-leccion" id="practica-js"><div><p class="eyebrow">PRACTICA</p><h2>Crea tu propio saludo</h2><p>Modifica la función para que use tu nombre y una tecnología favorita.</p></div><label for="editor-js" class="sr-only">Editor de práctica JavaScript</label><textarea id="editor-js" spellcheck="false">const presentar = (nombre, tecnologia) =&gt; {
+  return `Soy ${nombre} y aprendo ${tecnologia}.`;
+};
+
+console.log(presentar('Tu nombre', 'JavaScript'));</textarea></section>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#funciones">Siguiente: Funciones →</a></nav>
+    </article></main></div>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+</body></html>

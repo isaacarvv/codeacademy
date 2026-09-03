@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía práctica de Next.js 14 en CodeAcademy">
+  <title>Next.js 14 | CodeAcademy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera-prueba">
+    <a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a>
+    <nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav>
+    <div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-next">Buscar tecnología</label><input id="buscar-next" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div>
+  </header>
+  <div class="dashboard-layout aula-layout">
+    <aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">Next.js 14</p><a class="enlace-activo" href="#fundamentos-next">Módulo 1: Fundamentos</a><a href="#app-router">Lección 1: App Router</a><a href="#server-components">Lección 2: Server Components</a><a href="#practica-next">Práctica guiada</a></nav></aside>
+    <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="fundamentos-next">
+      <p class="eyebrow">RUTA FULLSTACK · LECCIÓN 1</p><h1>Master en Next.js 14</h1><p class="intro-leccion">Next.js te permite crear aplicaciones web rápidas con React, renderizado en el servidor y rutas basadas en archivos.</p>
+      <h2 id="app-router">El App Router</h2><p>En Next.js 14, cada carpeta dentro de <code>app</code> puede representar una ruta. El archivo <code>page.tsx</code> define lo que se muestra cuando una persona visita esa dirección.</p><ul><li>Las rutas se organizan con carpetas, sin configuración extra.</li><li>Los layouts permiten compartir navegación y estructura.</li><li>Los componentes se renderizan en el servidor por defecto.</li></ul>
+      <h2 id="server-components">Una página inicial</h2><p>Esta es una página mínima usando el App Router. Observa que no necesitas importar React para escribir JSX.</p>
+      <pre><code><span class="codigo-comentario">// app/page.tsx</span>
+export default function Inicio() {
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;Hola desde Next.js&lt;/h1&gt;
+      &lt;p&gt;Mi primera ruta con App Router.&lt;/p&gt;
+    &lt;/main&gt;
+  );
+}</code></pre>
+      <aside class="nota-leccion"><strong>Idea clave</strong><p>Un Server Component puede obtener datos de forma segura antes de enviar HTML al navegador. Añade <code>'use client'</code> solo cuando necesites interacción del usuario.</p></aside>
+      <section class="practica-leccion" id="practica-next"><div><p class="eyebrow">PRACTICA</p><h2>Personaliza tu página</h2><p>Cambia el título y añade una lista de tecnologías que quieres aprender.</p></div><label for="editor-next" class="sr-only">Editor de práctica Next.js</label><textarea id="editor-next" spellcheck="false">export default function Inicio() {
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;Mi ruta en Next.js&lt;/h1&gt;
+      &lt;ul&gt;
+        &lt;li&gt;React&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/main&gt;
+  );
+}</textarea></section>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#server-components">Siguiente: Server Components →</a></nav>
+    </article></main>
+  </div>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+</body>
+</html>

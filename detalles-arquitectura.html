@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Guía abierta de arquitectura frontend"><title>Arquitectura Frontend | CodeAcademy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-arquitectura">Buscar tecnología</label><input id="buscar-arquitectura" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div></header>
+  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">Arquitectura Frontend</p><a class="enlace-activo" href="#arquitectura">Módulo 1: Principios</a><a href="#capas">Lección 1: Capas</a><a href="#componentes">Lección 2: Componentes</a><a href="#practica-arquitectura">Práctica guiada</a></nav></aside>
+    <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="arquitectura"><p class="eyebrow">RUTA AVANZADA · LECCIÓN 1</p><h1>Arquitectura Frontend Senior</h1><p class="intro-leccion">La arquitectura no consiste en usar más carpetas: consiste en tomar decisiones que permitan que un proyecto crezca sin perder claridad.</p>
+      <h2 id="capas">Separa por responsabilidades</h2><p>Una aplicación mantenible distingue entre la interfaz, la lógica del dominio y la comunicación con servicios externos. Esa separación reduce el acoplamiento y facilita las pruebas.</p><ul><li><strong>UI:</strong> componentes que muestran información y gestionan interacción.</li><li><strong>Dominio:</strong> reglas del producto independientes de la interfaz.</li><li><strong>Infraestructura:</strong> peticiones HTTP, almacenamiento y servicios externos.</li></ul>
+      <h2 id="componentes">Organiza por funcionalidades</h2><p>En lugar de una carpeta global para cada tipo de archivo, agrupa los archivos que cambian juntos dentro de una funcionalidad.</p>
+      <pre><code><span class="codigo-comentario">// estructura sugerida</span>
+src/
+  features/
+    cursos/
+      CursoCard.tsx
+      cursos.service.ts
+      cursos.types.ts
+  shared/
+    ui/
+    utils/</code></pre>
+      <aside class="nota-leccion"><strong>Idea clave</strong><p>La mejor estructura es la que hace fácil encontrar, cambiar y eliminar código. Empieza simple y extrae capas cuando el problema lo justifique.</p></aside>
+      <section class="practica-leccion" id="practica-arquitectura"><div><p class="eyebrow">PRACTICA</p><h2>Diseña una funcionalidad</h2><p>Define los archivos mínimos que necesitarías para una sección de cursos favoritos.</p></div><label for="editor-arquitectura" class="sr-only">Editor de práctica de arquitectura</label><textarea id="editor-arquitectura" spellcheck="false">features/
+  favoritos/
+    FavoritoButton.tsx
+    favoritos.service.ts
+    favoritos.types.ts</textarea></section>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#componentes">Siguiente: Componentes →</a></nav>
+    </article></main></div>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+</body></html>

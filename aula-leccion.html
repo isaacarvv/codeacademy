@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lección de HTML semántico en CodeAcademy">
+  <title>HTML semántico | CodeAcademy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera-prueba">
+    <a class="logo-prueba" href="index.html#inicio" aria-label="Ir al inicio de CodeAcademy">&lt;CodeAcademy /&gt;</a>
+    <nav class="navegacion-prueba" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+    </nav>
+    <div class="acciones-prueba">
+      <form class="busqueda-prueba" action="cursos.html" method="get" role="search">
+        <label class="sr-only" for="buscar-tecnologia">Buscar tecnología</label>
+        <input id="buscar-tecnologia" name="q" type="search" placeholder="Buscar...">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+      <a class="boton-unirme" href="cursos.html">Explorar Cursos</a>
+    </div>
+  </header>
+
+  <div class="dashboard-layout aula-layout">
+    <aside class="sidebar-alumno sidebar-aula">
+      <nav class="nav-alumno indice-curso" aria-label="Índice del curso">
+        <p class="titulo-indice">HTML Semántico</p>
+        <a class="enlace-activo" href="#modulo-1">Módulo 1: Bases</a>
+        <a href="#que-es-html">Lección 1: ¿Qué es HTML?</a>
+        <a href="#estructura">Lección 2: Estructura base</a>
+        <a href="#semantica">Lección 3: Semántica</a>
+        <a href="#siguiente-modulo">Módulo 2: Accesibilidad</a>
+      </nav>
+    </aside>
+
+    <main class="contenido-dashboard aula-principal">
+      <article class="contenido-leccion" id="modulo-1">
+        <p class="eyebrow">MÓDULO 1 · LECCIÓN 2</p>
+        <h1 id="estructura">La estructura de un documento HTML</h1>
+        <p class="intro-leccion">Antes de añadir estilos o interactividad, todo sitio web necesita una base clara. HTML define la estructura y el significado del contenido que verá el navegador.</p>
+
+        <h2 id="que-es-html">¿Qué encontrarás en un documento HTML?</h2>
+        <p>Un documento HTML moderno comienza indicando su tipo, contiene una zona de configuración llamada <code>head</code> y una zona visible llamada <code>body</code>. Cada una tiene responsabilidades distintas.</p>
+        <ul>
+          <li><strong>DOCTYPE:</strong> informa al navegador que trabajamos con HTML5.</li>
+          <li><strong>Head:</strong> reúne metadatos, el título y enlaces a recursos como CSS.</li>
+          <li><strong>Body:</strong> contiene todo lo que las personas pueden leer e interactuar.</li>
+        </ul>
+
+        <h2 id="semantica">Tu primera estructura</h2>
+        <p>Observa esta plantilla. No necesitas memorizarla de inmediato: úsala como punto de partida para tus proyectos y entenderás cada parte mientras practicas.</p>
+
+        <pre><code><span class="codigo-comentario">&lt;!-- index.html --&gt;</span>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola, mundo&lt;/h1&gt;
+    &lt;p&gt;Estoy aprendiendo desarrollo web.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>La propiedad <code>lang="es"</code> ayuda a lectores de pantalla y motores de búsqueda a identificar el idioma principal. Es un pequeño detalle con un impacto importante en accesibilidad.</p>
+
+        <aside class="nota-leccion">
+          <strong>Consejo de práctica</strong>
+          <p>Crea un archivo llamado <code>index.html</code>, copia la estructura y ábrelo en tu navegador. Cambia el título y el texto para hacerlo tuyo.</p>
+        </aside>
+
+        <nav class="navegacion-leccion" id="siguiente-modulo" aria-label="Navegación de lecciones">
+          <a href="cursos.html">← Volver al catálogo</a>
+          <a href="#semantica">Siguiente: HTML semántico →</a>
+        </nav>
+      </article>
+    </main>
+  </div>
+
+  <footer class="pie-prueba">
+    <a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a>
+    <nav aria-label="Enlaces secundarios">
+      <a href="cursos.html">Cursos</a>
+      <a href="index.html#sobre-nosotros">Sobre Nosotros</a>
+      <a href="index.html#sobre-nosotros">Contacto</a>
+    </nav>
+    <p>© 2026 CodeAcademy. Aprende construyendo.</p>
+  </footer>
+</body>
+</html>
