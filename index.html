@@ -6,15 +6,21 @@
   <meta name="description" content="CodeAcademy: cursos de desarrollo web para construir el stack del futuro.">
   <title>CodeAcademy | Domina el Stack del Futuro</title>
   <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
 </head>
 <body class="pagina-inicio">
   <header class="cabecera-prueba">
     <a class="logo-prueba" href="#inicio" aria-label="Ir al inicio de CodeAcademy">&lt;CodeAcademy /&gt;</a>
 
+    <button class="boton-menu-movil" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav class="navegacion-prueba" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
       <a href="#cursos">Cursos</a>
       <a href="nosotros.html">Sobre Nosotros</a>
+      <a class="enlace-ruta-movil" href="ruta-inicio.html">Ruta de inicio</a>
     </nav>
 
     <div class="acciones-prueba">
@@ -23,7 +29,7 @@
         <input id="buscar-tecnologia" name="q" type="search" placeholder="Buscar...">
         <button type="submit" aria-label="Buscar">⌕</button>
       </form>
-      <a class="boton-unirme" href="cursos.html">Explorar Cursos</a>
+      <a class="boton-unirme" href="ruta-inicio.html">Ruta de inicio</a>
     </div>
   </header>
 

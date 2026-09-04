@@ -6,14 +6,18 @@
   <meta name="description" content="Cursos de desarrollo web en CodeAcademy">
   <title>CodeAcademy | Cursos de Desarrollo Web</title>
   <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+  <script src="catalogo.js" defer></script>
 </head>
 <body>
 <header class="cabecera-prueba">
     <a class="logo-prueba" href="index.html#inicio" aria-label="Ir al inicio de CodeAcademy">&lt;CodeAcademy /&gt;</a>
+    <button class="boton-menu-movil" type="button" aria-expanded="false" aria-label="Abrir menú de navegación"><span></span><span></span><span></span></button>
     <nav class="navegacion-prueba" aria-label="Navegación principal">
       <a href="index.html#inicio">Inicio</a>
       <a href="cursos.html">Cursos</a>
       <a href="nosotros.html">Sobre Nosotros</a>
+      <a class="enlace-ruta-movil" href="ruta-inicio.html">Ruta de inicio</a>
     </nav>
     <div class="acciones-prueba">
       <form class="busqueda-prueba" action="cursos.html" method="get" role="search">
@@ -21,7 +25,7 @@
         <input id="buscar-tecnologia" name="q" type="search" placeholder="Buscar...">
         <button type="submit" aria-label="Buscar">⌕</button>
       </form>
-      <a class="boton-unirme" href="cursos.html">Explorar Cursos</a>
+      <a class="boton-unirme" href="ruta-inicio.html">Ruta de inicio</a>
     </div>
   </header>
 
@@ -29,7 +33,7 @@
     <aside class="sidebar-filtros filtros-v2">
       <div class="encabezado-filtros-v2">
         <h1><span aria-hidden="true">☷</span> Filtros</h1>
-        <button type="button">Limpiar todo</button>
+        <button id="limpiar-filtros" type="button">Limpiar todo</button>
       </div>
 
       <fieldset class="grupo-filtros">
@@ -41,13 +45,13 @@
       <fieldset class="grupo-filtros">
         <legend>Nivel</legend>
         <label><input type="checkbox"> <span>Principiante</span></label>
-        <label><input type="checkbox" checked> <span>Intermedio</span></label>
+        <label><input type="checkbox"> <span>Intermedio</span></label>
         <label><input type="checkbox"> <span>Avanzado</span></label>
       </fieldset>
 
       <fieldset class="grupo-filtros">
         <legend>Tecnología</legend>
-        <label><input type="checkbox" checked> <span>JavaScript</span></label>
+        <label><input type="checkbox"> <span>JavaScript</span></label>
         <label><input type="checkbox"> <span>React</span></label>
         <label><input type="checkbox"> <span>CSS</span></label>
         <label><input type="checkbox"> <span>Next.js</span></label>
@@ -62,24 +66,9 @@
     </aside>
 
     <section class="catalogo-grid catalogo-v2" aria-labelledby="titulo-catalogo">
-      <div class="barra-catalogo barra-catalogo-v2">
-        <label class="busqueda-interna" for="buscar-curso">
-          <span class="sr-only">Buscar cursos</span>
-          <span aria-hidden="true">⌕</span>
-          <input id="buscar-curso" type="search" placeholder="¿Qué quieres aprender? Escribe para buscar...">
-        </label>
-        <label class="sr-only" for="ordenar">Ordenar cursos</label>
-        <select id="ordenar">
-          <option>Más relevantes</option>
-          <option>Más recientes</option>
-          <option>Menor duración</option>
-          <option>Mayor duración</option>
-        </select>
-      </div>
-
       <h2 class="sr-only" id="titulo-catalogo">Catálogo de cursos</h2>
       <div class="grid-catalogo-cursos grid-catalogo-v2">
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="intermedio" data-tecnologias="javascript" data-duracion="12" data-orden="1">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-js">JS</span>
             <div><span class="nivel-v2 nivel-intermedio">● Intermedio</span><span class="duracion-v2">◷ 12h</span></div>
@@ -90,7 +79,7 @@
           <a href="detalles-javascript.html" aria-label="Abrir lección de JavaScript Foundations"></a>
         </article>
 
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="avanzado" data-tecnologias="react typescript" data-duracion="18" data-orden="2">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-react">{ }</span>
             <div><span class="nivel-v2 nivel-avanzado">● Avanzado</span><span class="duracion-v2">◷ 18h</span></div>
@@ -101,7 +90,7 @@
           <a href="detalles-react-typescript.html" aria-label="Abrir lección de React Performance"></a>
         </article>
 
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="intermedio" data-tecnologias="typescript javascript" data-duracion="8" data-orden="3">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-ts">TS</span>
             <div><span class="nivel-v2 nivel-intermedio">● Intermedio</span><span class="duracion-v2">◷ 8h</span></div>
@@ -112,7 +101,7 @@
           <a href="detalles-react-typescript.html" aria-label="Abrir lección de TypeScript Essentials"></a>
         </article>
 
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="principiante" data-tecnologias="html" data-duracion="7" data-orden="4">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-html">5</span>
             <div><span class="nivel-v2 nivel-principiante">● Principiante</span><span class="duracion-v2">◷ 7h</span></div>
@@ -123,7 +112,7 @@
           <a href="detalles-html.html" aria-label="Abrir lección de HTML Semántico"></a>
         </article>
 
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="principiante" data-tecnologias="css" data-duracion="11" data-orden="5">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-css">3</span>
             <div><span class="nivel-v2 nivel-principiante">● Principiante</span><span class="duracion-v2">◷ 11h</span></div>
@@ -134,7 +123,7 @@
           <a href="detalles-css.html" aria-label="Abrir lección de CSS Grid y Flexbox Pro"></a>
         </article>
 
-        <article class="tarjeta-catalogo-v2">
+        <article class="tarjeta-catalogo-v2" data-tipo="curso" data-nivel="avanzado" data-tecnologias="nextjs react" data-duracion="18" data-orden="6">
           <div class="curso-cabecera-v2">
             <span class="logo-curso-v2 logo-next">▲</span>
             <div><span class="nivel-v2 nivel-avanzado">● Avanzado</span><span class="duracion-v2">◷ 18h</span></div>

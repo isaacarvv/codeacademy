@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Guía abierta de React y TypeScript"><title>React y TypeScript | CodeAcademy</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Guía abierta de React y TypeScript"><title>React y TypeScript | CodeAcademy</title><link rel="stylesheet" href="style.css"><script src="menu.js" defer></script></head>
 <body>
-  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-react">Buscar tecnología</label><input id="buscar-react" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="cursos.html">Explorar Cursos</a></div></header>
-  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">React + TypeScript</p><a class="enlace-activo" href="#react-typescript">Módulo 1: Tipos</a><a href="#props">Lección 1: Props</a><a href="#estado">Lección 2: Estado</a><a href="#practica-react">Práctica guiada</a></nav></aside>
+  <header class="cabecera-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><button class="boton-menu-movil" type="button" aria-expanded="false" aria-label="Abrir menú de navegación"><span></span><span></span><span></span></button><nav class="navegacion-prueba" aria-label="Navegación principal"><a href="index.html#inicio">Inicio</a><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a><a class="enlace-ruta-movil" href="ruta-inicio.html">Ruta de inicio</a></nav><div class="acciones-prueba"><form class="busqueda-prueba" action="cursos.html" method="get"><label class="sr-only" for="buscar-react">Buscar tecnología</label><input id="buscar-react" name="q" type="search" placeholder="Buscar..."><button type="submit" aria-label="Buscar">⌕</button></form><a class="boton-unirme" href="ruta-inicio.html">Ruta de inicio</a></div></header>
+  <div class="dashboard-layout aula-layout"><aside class="sidebar-alumno sidebar-aula"><nav class="nav-alumno indice-curso" aria-label="Índice del curso"><p class="titulo-indice">React + TypeScript</p><a class="enlace-activo" href="#props">Lección 1: Props</a><a href="#estado">Lección 2: Estado</a><a href="#eventos-react">Lección 3: Eventos</a><a href="#efectos-react">Lección 4: Efectos</a><a href="#listas-react">Lección 5: Listas</a><a href="#practica-react">Práctica guiada</a></nav></aside>
     <main class="contenido-dashboard aula-principal"><article class="contenido-leccion" id="react-typescript"><p class="eyebrow">RUTA FRONTEND · LECCIÓN 1</p><h1>React y TypeScript Essentials</h1><p class="intro-leccion">TypeScript hace que tus componentes React comuniquen mejor qué datos necesitan y qué valores pueden devolver.</p>
       <h2 id="props">Describe las props</h2><p>Las props son los datos que un componente recibe desde su padre. Define un tipo para documentar y verificar esas entradas antes de ejecutar la aplicación.</p><ul><li>Los tipos detectan errores antes de llegar al navegador.</li><li>Las props opcionales se marcan con <code>?</code>.</li><li>Los nombres precisos mejoran el autocompletado del editor.</li></ul>
       <h2 id="estado">Un componente tipado</h2><p>Este ejemplo recibe un nombre y muestra una tarjeta simple. Si falta la prop obligatoria, TypeScript avisará.</p>
@@ -16,6 +16,15 @@ type SaludoProps = {
 export function Saludo({ nombre, activo = true }: SaludoProps) {
   return &lt;p&gt;{activo ? `Hola, ${nombre}` : 'Sin conexión'}&lt;/p&gt;;
 }</code></pre>
+      <section class="leccion-bloque" id="eventos-react"><h2>Tipa los eventos</h2><p>React ofrece tipos para eventos comunes. Al usarlos, el editor sabe qué propiedades están disponibles en cada manejador.</p><pre><code>function guardar(evento: React.FormEvent&lt;HTMLFormElement&gt;) {
+  evento.preventDefault();
+}</code></pre></section>
+      <section class="leccion-bloque" id="efectos-react"><h2>Sincroniza con efectos</h2><p>Usa <code>useEffect</code> para sincronizar un componente con algo externo, como el título del documento o una suscripción.</p><pre><code>useEffect(() =&gt; {
+  document.title = 'Curso activo';
+}, []);</code></pre></section>
+      <section class="leccion-bloque" id="listas-react"><h2>Renderiza listas con claves</h2><p>Al transformar una lista en elementos, cada resultado necesita una clave estable. Así React identifica qué cambió entre renders.</p><pre><code>{cursos.map((curso) =&gt; (
+  &lt;li key={curso.id}&gt;{curso.titulo}&lt;/li&gt;
+))}</code></pre></section>
       <aside class="nota-leccion"><strong>Idea clave</strong><p>No necesitas tipar todo explícitamente. Empieza por las props, las respuestas de API y las funciones públicas: son los límites donde más valor aporta TypeScript.</p></aside>
       <section class="practica-leccion" id="practica-react"><div><p class="eyebrow">PRACTICA</p><h2>Tipa una tarjeta de curso</h2><p>Añade una prop para indicar el nivel del curso y muéstrala en el componente.</p></div><label for="editor-react" class="sr-only">Editor de práctica React y TypeScript</label><textarea id="editor-react" spellcheck="false">type CursoProps = {
   titulo: string;
@@ -25,7 +34,7 @@ export function Saludo({ nombre, activo = true }: SaludoProps) {
 export function Curso({ titulo, nivel }: CursoProps) {
   return &lt;h2&gt;{titulo} — {nivel}&lt;/h2&gt;;
 }</textarea></section>
-      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#estado">Siguiente: Estado tipado →</a></nav>
+      <nav class="navegacion-leccion" aria-label="Navegación de lecciones"><a href="cursos.html">← Volver al catálogo</a><a href="#practica-react">Ir a la práctica →</a></nav>
     </article></main></div>
-  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="index.html#sobre-nosotros">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
+  <footer class="pie-prueba"><a class="logo-prueba" href="index.html#inicio">&lt;CodeAcademy /&gt;</a><nav aria-label="Enlaces secundarios"><a href="cursos.html">Cursos</a><a href="nosotros.html">Sobre Nosotros</a></nav><p>© 2026 CodeAcademy. Aprende construyendo.</p></footer>
 </body></html>

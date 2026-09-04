@@ -91,6 +91,16 @@ input {
   gap: 2.25rem;
 }
 
+/* Mantiene "Sobre Nosotros" como enlace central del menú. */
+.navegacion-prueba a[href="nosotros.html"] {
+  order: 2;
+}
+
+.navegacion-prueba a[href="cursos.html"],
+.navegacion-prueba a[href="#cursos"] {
+  order: 3;
+}
+
 .navegacion-prueba a {
   color: var(--texto);
   font-size: 0.82rem;
@@ -109,37 +119,7 @@ input {
 }
 
 .busqueda-prueba {
-  display: flex;
-  align-items: center;
-  width: 136px;
-  border-bottom: 1px solid transparent;
-  transition: width 0.25s ease, border-color 0.2s ease;
-}
-
-.busqueda-prueba:focus-within {
-  width: 190px;
-  border-color: var(--menta);
-}
-
-.busqueda-prueba input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--texto);
-  font-size: 0.76rem;
-}
-
-.busqueda-prueba input::placeholder {
-  color: #859399;
-}
-
-.busqueda-prueba button {
-  border: 0;
-  background: transparent;
-  color: var(--texto);
-  cursor: pointer;
-  font-size: 1.1rem;
+  display: none;
 }
 
 .boton-unirme,
@@ -664,6 +644,13 @@ input {
   font-weight: 800;
 }
 
+/* Ruta de inicio */
+.contenido-ruta { padding: clamp(4rem, 9vw, 8rem) 0 clamp(5rem, 9vw, 8rem); }
+.hero-ruta-inicio { position: relative; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.7fr); gap: clamp(2rem, 6vw, 6rem); max-width: none; padding: clamp(1.8rem, 5vw, 4rem); overflow: hidden; border: 1px solid rgba(70, 216, 157, 0.24); border-radius: 0.9rem; background: radial-gradient(circle at 90% 10%, rgba(70, 216, 157, 0.2), transparent 30%), radial-gradient(circle at 20% 100%, rgba(164, 230, 255, 0.08), transparent 34%), linear-gradient(145deg, #171f23, #11171b); }.hero-ruta-inicio::after { position: absolute; right: -7rem; bottom: -9rem; width: 23rem; height: 23rem; border: 1px solid rgba(104, 245, 184, 0.1); border-radius: 50%; content: ''; pointer-events: none; }.hero-ruta-contenido { position: relative; z-index: 1; }.hero-ruta-inicio h1 { max-width: 720px; margin-top: 0.85rem; font-size: clamp(2.15rem, 5vw, 3.65rem); letter-spacing: -0.06em; line-height: 1.05; }.hero-ruta-contenido > p:not(.badge-biblioteca) { max-width: 650px; margin-top: 1.1rem; color: var(--texto-secundario); font-size: 0.95rem; line-height: 1.7; }.hero-ruta-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.6rem; }.hero-ruta-inicio .boton-menta { display: inline-flex; }.hero-ruta-acciones > span { color: var(--texto-secundario); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; }
+.mapa-ruta { position: relative; z-index: 1; align-self: center; padding: 1.1rem; border: 1px solid rgba(164, 230, 255, 0.18); border-radius: 0.7rem; background: rgba(9, 15, 19, 0.56); backdrop-filter: blur(10px); }.mapa-ruta-cabecera { display: flex; align-items: center; gap: 0.55rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(48, 54, 61, 0.75); color: var(--cian); }.mapa-ruta-cabecera span { font-size: 0.9rem; }.mapa-ruta-cabecera p { font-family: 'JetBrains Mono', monospace; font-size: 0.61rem; font-weight: 700; letter-spacing: 0.07em; }.mapa-ruta ol { display: grid; gap: 0.15rem; margin-top: 0.7rem; list-style: none; }.mapa-ruta li { display: grid; grid-template-columns: 1.7rem 1fr auto; align-items: center; gap: 0.55rem; padding: 0.6rem 0.45rem; border-radius: 0.4rem; color: var(--texto-secundario); }.mapa-ruta li + li { border-top: 1px solid rgba(48, 54, 61, 0.45); }.mapa-ruta li span { color: #64727a; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; }.mapa-ruta li strong { color: var(--texto); font-size: 0.78rem; }.mapa-ruta li small { color: #7e8c94; font-size: 0.62rem; }.mapa-ruta .mapa-activo { background: rgba(104, 245, 184, 0.1); }.mapa-ruta .mapa-activo span, .mapa-ruta .mapa-activo strong { color: var(--menta); }
+.pasos-ruta { margin-top: clamp(3.5rem, 8vw, 7rem); }.encabezado-ruta { max-width: 620px; }.encabezado-ruta h2 { margin-top: 0.55rem; font-size: clamp(1.6rem, 3vw, 2.35rem); letter-spacing: -0.05em; }.pasos-ruta ol { display: grid; gap: 1rem; margin-top: 2.25rem; list-style: none; counter-reset: ruta; }
+.paso-ruta { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: 1.1rem; align-items: start; padding: 1.4rem; border: 1px solid rgba(48, 54, 61, 0.9); border-radius: 0.75rem; background: linear-gradient(145deg, #171e23, #141a1f); transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; }.paso-ruta:hover { transform: translateY(-3px); border-color: rgba(104, 245, 184, 0.55); box-shadow: 0 0 24px rgba(104, 245, 184, 0.08); }.numero-paso { padding-top: 0.25rem; color: var(--menta); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; }.meta-paso { color: var(--cian); font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.05em; }.paso-ruta h3 { margin-top: 0.45rem; font-size: 1.15rem; letter-spacing: -0.035em; }.paso-ruta div > p:not(.meta-paso) { max-width: 650px; margin-top: 0.45rem; color: var(--texto-secundario); font-size: 0.82rem; line-height: 1.6; }.paso-ruta a { display: inline-flex; gap: 0.45rem; margin-top: 0.95rem; color: var(--menta); font-size: 0.76rem; font-weight: 700; }.paso-ruta a:hover { color: var(--cian); }.icono-paso { display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid rgba(164, 230, 255, 0.25); border-radius: 0.45rem; color: var(--cian); font-family: 'JetBrains Mono', monospace; font-weight: 700; }.paso-html .icono-paso { border-color: rgba(227, 76, 38, 0.35); color: #e34c26; }.paso-css .icono-paso { border-color: rgba(38, 77, 228, 0.35); color: #6d93ff; }.paso-js .icono-paso { border-color: rgba(247, 223, 30, 0.35); color: #f7df1e; }.paso-next .icono-paso { border-color: rgba(221, 227, 233, 0.28); color: var(--texto); }
+
 .pie-prueba {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -729,6 +716,12 @@ input {
   .compromiso-nosotros {
     grid-template-columns: 1fr;
   }
+
+  .paso-ruta { grid-template-columns: 2.6rem minmax(0, 1fr); }
+  .icono-paso { display: none; }
+
+  .hero-ruta-inicio { grid-template-columns: 1fr; }
+  .mapa-ruta { max-width: 440px; }
 }
 
 @media (max-width: 620px) {
@@ -1459,6 +1452,7 @@ input {
 .contenido-leccion { width: min(100%, 800px); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem); border: 1px solid rgba(48, 54, 61, 0.9); border-radius: 0.9rem; background: linear-gradient(145deg, rgba(23, 30, 35, 0.88), rgba(20, 26, 31, 0.88)); box-shadow: inset 0 1px 0 rgba(221, 227, 233, 0.025); }
 .contenido-leccion h1 { margin: 0.65rem 0 1.25rem; color: var(--texto); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.055em; line-height: 1.1; }
 .contenido-leccion h2 { margin: 2.5rem 0 0.8rem; color: var(--texto); font-size: clamp(1.3rem, 3vw, 1.65rem); letter-spacing: -0.035em; }
+.leccion-bloque { scroll-margin-top: 5.5rem; }
 .contenido-leccion p,
 .contenido-leccion li { color: var(--texto-secundario); font-size: 0.98rem; line-height: 1.75; }
 .contenido-leccion .intro-leccion { margin-bottom: 1.7rem; color: var(--texto); font-size: 1.08rem; line-height: 1.75; }
@@ -2583,5 +2577,684 @@ input {
 
   .curso-individual .cuerpo-curso {
     display: block;
+  }
+}
+
+/* ================================================================
+   Capa responsive global
+   Mantiene el mismo lenguaje visual en móvil y tablet sin comprimir
+   tarjetas, controles ni contenido de lectura.
+   ================================================================ */
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  /* El menú principal sigue disponible y ordenado en dos filas. */
+  .cabecera-prueba {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 0.7rem;
+    min-height: 108px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .navegacion-prueba {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 2.25rem);
+  }
+
+  .navegacion-prueba a {
+    white-space: nowrap;
+  }
+
+  .hero-prueba {
+    min-height: 500px;
+    padding-top: 5.5rem;
+  }
+
+  .beneficios-prueba {
+    gap: 1rem;
+  }
+
+  .tarjeta-beneficio-prueba {
+    padding: 1.65rem 1rem;
+  }
+
+  .grid-rutas-prueba {
+    gap: 1rem;
+  }
+
+  .tarjeta-ruta-prueba {
+    min-height: 230px;
+    padding: 1.4rem;
+  }
+
+  .catalogo-cursos-v2 .filtros-v2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* En aula el índice pasa arriba: el texto conserva un ancho cómodo. */
+  .aula-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-aula {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    padding: 0.65rem 0.8rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .sidebar-aula .titulo-indice {
+    display: none;
+  }
+
+  .sidebar-aula .nav-alumno {
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .sidebar-aula .nav-alumno::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-aula .nav-alumno a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .aula-principal {
+    width: 100%;
+  }
+
+  .contenido-leccion {
+    width: min(100%, 800px);
+  }
+}
+
+@media (max-width: 760px) {
+  .seccion-prueba,
+  .curso-individual,
+  .catalogo-cursos-v2 {
+    width: min(100% - 2.5rem, 620px);
+  }
+
+  .beneficios-prueba,
+  .grid-rutas-prueba {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-beneficio-prueba {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .icono-beneficio-prueba {
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .tarjeta-beneficio-prueba p {
+    margin-top: 0.35rem;
+  }
+
+  .grid-cursos-prueba {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .paso-ruta {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .paso-ruta .icono-paso {
+    display: none;
+  }
+
+  .curso-individual .hero-curso,
+  .curso-individual .cuerpo-curso,
+  .curso-individual .lateral-compra {
+    width: 100%;
+  }
+
+  .curso-individual .contenido-curso {
+    gap: 1.25rem;
+  }
+
+  .curso-individual .video-presentacion {
+    min-height: 290px;
+  }
+
+  .pie-prueba {
+    gap: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .cabecera-prueba {
+    min-height: 104px;
+    padding: 0.65rem 1rem 0.7rem;
+  }
+
+  .logo-prueba {
+    font-size: 1rem;
+  }
+
+  .boton-unirme {
+    padding: 0.52rem 0.65rem;
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+
+  .navegacion-prueba {
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .navegacion-prueba a {
+    font-size: 0.72rem;
+  }
+
+  .hero-prueba {
+    min-height: 0;
+    padding: 4.5rem 1.25rem 4rem;
+  }
+
+  .hero-prueba h1 {
+    font-size: clamp(2rem, 10vw, 2.65rem);
+  }
+
+  .hero-prueba-descripcion {
+    font-size: 0.86rem;
+  }
+
+  .hero-prueba-acciones,
+  .hero-ruta-acciones {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-prueba-acciones a,
+  .hero-ruta-acciones a {
+    width: 100%;
+  }
+
+  .seccion-prueba,
+  .curso-individual,
+  .catalogo-cursos-v2 {
+    width: min(100% - 2rem, 540px);
+  }
+
+  .beneficios-prueba {
+    padding-top: 1.25rem;
+  }
+
+  .tarjeta-beneficio-prueba {
+    padding: 1.2rem;
+  }
+
+  .rutas-prueba {
+    padding-top: 3.75rem;
+  }
+
+  .encabezado-rutas-prueba h2,
+  .encabezado-ruta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cursos-prueba {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .grid-cursos-prueba,
+  .catalogo-cursos-v2 .grid-catalogo-v2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-curso-prueba {
+    min-height: 215px;
+  }
+
+  .encabezado-cursos-prueba {
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .contenido-ruta {
+    padding-top: 2rem;
+  }
+
+  .hero-ruta-inicio {
+    gap: 1.5rem;
+    padding: 1.35rem;
+  }
+
+  .hero-ruta-inicio h1 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+  }
+
+  .mapa-ruta li {
+    grid-template-columns: 1.4rem minmax(0, 1fr);
+  }
+
+  .mapa-ruta li small {
+    display: none;
+  }
+
+  .paso-ruta {
+    display: block;
+  }
+
+  .numero-paso {
+    margin-bottom: 0.6rem;
+  }
+
+  .paso-ruta h3 {
+    font-size: 1.05rem;
+  }
+
+  .catalogo-cursos-v2 {
+    padding-top: 1.75rem;
+  }
+
+  .catalogo-cursos-v2 .filtros-v2 {
+    display: block;
+  }
+
+  .catalogo-cursos-v2 .encabezado-filtros-v2 {
+    padding-bottom: 0.8rem;
+  }
+
+  .catalogo-cursos-v2 .grupo-filtros {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .catalogo-cursos-v2 .barra-catalogo-v2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 1.5rem;
+  }
+
+  .barra-catalogo-v2 .busqueda-interna {
+    padding: 0 0.7rem;
+  }
+
+  .tarjeta-catalogo-v2 {
+    min-height: 245px;
+  }
+
+  .curso-cabecera-v2 {
+    gap: 0.6rem;
+  }
+
+  .curso-cabecera-v2 > div {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .curso-individual {
+    padding: 1.5rem 0 3.5rem;
+  }
+
+  .curso-individual .hero-curso {
+    padding: 1.35rem;
+  }
+
+  .curso-individual .hero-curso h1 {
+    font-size: clamp(1.85rem, 9vw, 2.35rem);
+  }
+
+  .curso-individual .descripcion-curso {
+    font-size: 0.85rem;
+  }
+
+  .curso-individual .datos-curso {
+    gap: 0.45rem;
+  }
+
+  .curso-individual .datos-curso span {
+    font-size: 0.58rem;
+  }
+
+  .curso-individual .video-presentacion {
+    min-height: 225px;
+  }
+
+  .curso-individual .bloque-curso {
+    padding: 1.15rem;
+  }
+
+  .curso-individual .temario summary {
+    min-height: 0;
+    padding: 0.9rem;
+  }
+
+  .curso-individual .temario details li {
+    gap: 0.7rem;
+    font-size: 0.72rem;
+  }
+
+  .contenido-dashboard {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .contenido-leccion {
+    padding: 1.15rem;
+    border-radius: 0.7rem;
+  }
+
+  .contenido-leccion h1 {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+  }
+
+  .contenido-leccion .intro-leccion {
+    font-size: 0.98rem;
+  }
+
+  .contenido-leccion p,
+  .contenido-leccion li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .contenido-leccion pre {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0.9rem;
+  }
+
+  .contenido-leccion pre code {
+    font-size: 0.7rem;
+  }
+
+  .pie-prueba nav {
+    gap: 0.8rem 1rem;
+  }
+
+  .pie-prueba p {
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 360px) {
+  .cabecera-prueba {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .logo-prueba {
+    font-size: 0.92rem;
+  }
+
+  .boton-unirme {
+    padding: 0.48rem 0.52rem;
+    font-size: 0.58rem;
+  }
+
+  .navegacion-prueba a {
+    font-size: 0.67rem;
+  }
+
+  .tarjeta-beneficio-prueba {
+    grid-template-columns: 1fr;
+  }
+
+  .icono-beneficio-prueba {
+    grid-row: auto;
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* Menú desplegable para móvil */
+.boton-menu-movil {
+  display: none;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  align-content: center;
+  gap: 0.28rem;
+  border: 1px solid rgba(164, 230, 255, 0.24);
+  border-radius: 0.45rem;
+  background: rgba(9, 15, 19, 0.64);
+  cursor: pointer;
+}
+
+.boton-menu-movil span {
+  display: block;
+  width: 1rem;
+  height: 1px;
+  background: var(--cian);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.enlace-ruta-movil {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .cabecera-prueba {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 64px;
+    row-gap: 0;
+  }
+
+  .cabecera-prueba .acciones-prueba {
+    display: none;
+  }
+
+  .boton-menu-movil {
+    display: grid;
+  }
+
+  .navegacion-prueba {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    width: auto;
+    padding: 0.55rem;
+    border: 1px solid rgba(48, 54, 61, 0.95);
+    border-radius: 0.7rem;
+    background: rgba(22, 27, 34, 0.98);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(16px);
+  }
+
+  .cabecera-prueba.menu-abierto .navegacion-prueba {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+    animation: entrada-menu-movil 0.2s ease both;
+  }
+
+  .navegacion-prueba .enlace-ruta-movil {
+    display: block;
+    order: 2;
+    margin-top: 0;
+    border: 0;
+    background: transparent;
+    color: var(--texto);
+    font-weight: 400;
+  }
+
+  .navegacion-prueba a {
+    padding: 0.78rem 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .navegacion-prueba a:hover,
+  .navegacion-prueba a:focus-visible {
+    background: rgba(104, 245, 184, 0.1);
+  }
+
+  .cabecera-prueba.menu-abierto .boton-menu-movil span:nth-child(1) {
+    transform: translateY(0.38rem) rotate(45deg);
+  }
+
+  .cabecera-prueba.menu-abierto .boton-menu-movil span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .cabecera-prueba.menu-abierto .boton-menu-movil span:nth-child(3) {
+    transform: translateY(-0.38rem) rotate(-45deg);
+  }
+}
+
+@keyframes entrada-menu-movil {
+  from { opacity: 0; transform: translateY(-0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* En tablet hay espacio suficiente para conservar el encabezado en una fila. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .cabecera-prueba {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    min-height: 68px;
+    padding-top: 0;
+    padding-bottom: 0;
+    row-gap: 0;
+  }
+
+  .navegacion-prueba {
+    display: flex;
+    grid-column: auto;
+    grid-row: auto;
+    gap: clamp(1.1rem, 3vw, 2rem);
+  }
+
+  .navegacion-prueba a {
+    padding: 0;
+    font-size: 0.78rem;
+  }
+
+  .cabecera-prueba .acciones-prueba {
+    display: flex;
+  }
+}
+
+/* Barra de búsqueda y controles del catálogo */
+.catalogo-cursos-v2 .barra-catalogo-v2 {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem;
+  border-color: rgba(164, 230, 255, 0.16);
+  border-radius: 0.8rem;
+  background:
+    linear-gradient(135deg, rgba(164, 230, 255, 0.055), transparent 42%),
+    rgba(17, 23, 28, 0.88);
+  box-shadow: inset 0 1px 0 rgba(221, 227, 233, 0.035), 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.catalogo-cursos-v2 .barra-catalogo-v2::before {
+  position: absolute;
+  top: -3rem;
+  right: 8%;
+  width: 9rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(104, 245, 184, 0.07);
+  content: '';
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.catalogo-cursos-v2 .barra-catalogo-v2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.barra-catalogo-v2 .busqueda-interna {
+  min-height: 52px;
+  border-color: rgba(164, 230, 255, 0.2);
+  border-radius: 0.55rem;
+  background: rgba(7, 13, 17, 0.68);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.barra-catalogo-v2 .busqueda-interna:hover {
+  border-color: rgba(164, 230, 255, 0.42);
+  background: rgba(9, 16, 21, 0.9);
+}
+
+.barra-catalogo-v2 .busqueda-interna > span[aria-hidden='true'] {
+  color: var(--cian);
+  font-size: 1.15rem;
+}
+
+.barra-catalogo-v2 .busqueda-interna input {
+  font-size: 0.86rem;
+}
+
+.barra-catalogo-v2 .busqueda-interna input::placeholder {
+  color: #7e8d96;
+}
+
+.barra-catalogo-v2 select {
+  min-height: 52px;
+  border-color: rgba(164, 230, 255, 0.18);
+  border-radius: 0.55rem;
+  background-color: rgba(7, 13, 17, 0.78);
+  color: var(--texto);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.barra-catalogo-v2 select:hover,
+.barra-catalogo-v2 select:focus {
+  border-color: var(--menta);
+  box-shadow: 0 0 0 3px rgba(104, 245, 184, 0.08);
+}
+
+.resultados-catalogo {
+  min-height: 1.25rem;
+  margin: -1.35rem 0 1.2rem;
+  color: #82929b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 620px) {
+  .catalogo-cursos-v2 .barra-catalogo-v2 {
+    padding: 0.6rem;
+  }
+
+  .barra-catalogo-v2 .busqueda-interna,
+  .barra-catalogo-v2 select {
+    min-height: 48px;
+  }
+
+  .resultados-catalogo {
+    margin: -0.7rem 0 1rem;
   }
 }
