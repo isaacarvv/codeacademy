@@ -74,20 +74,48 @@
         <h2>Elige el camino que mejor se adapte a ti</h2>
       </div>
       <div class="grid-rutas-prueba">
-        <article class="tarjeta-ruta-prueba ruta-design">
+        <article class="tarjeta-ruta-prueba ruta-design ruta-expandible">
           <span class="badge-ruta">Para creativos &amp; UI/UX</span>
           <span class="marca-ruta" aria-hidden="true">◌</span>
           <div>
             <h3>Design to Code</h3>
             <p>Un camino para creativos que quieren convertir sus ideas en código real y funcional.</p>
+            <button class="boton-expandir-ruta" type="button" aria-expanded="false" aria-controls="detalle-design">
+              Ver detalles <span aria-hidden="true">+</span>
+            </button>
+            <div class="detalle-ruta" id="detalle-design">
+              <div>
+                <p class="detalle-ruta-intro">Ideal si quieres dar el salto de una idea visual a una interfaz accesible y responsive.</p>
+                <ul>
+                  <li>HTML semántico y estructura clara.</li>
+                  <li>CSS moderno, Flexbox y Grid.</li>
+                  <li>Tu primera landing page para portafolio.</li>
+                </ul>
+                <a href="detalles-html.html">Comenzar con HTML <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="tarjeta-ruta-prueba ruta-javascript">
+        <article class="tarjeta-ruta-prueba ruta-javascript ruta-expandible">
           <span class="badge-ruta">Ya tienes experiencia</span>
           <span class="marca-ruta" aria-hidden="true">{ }</span>
           <div>
             <h3>Deep Dive into JavaScript</h3>
             <p>Conoces lo básico pero quieres dominar animaciones, features avanzadas y lógica compleja.</p>
+            <button class="boton-expandir-ruta" type="button" aria-expanded="false" aria-controls="detalle-javascript">
+              Ver detalles <span aria-hidden="true">+</span>
+            </button>
+            <div class="detalle-ruta" id="detalle-javascript">
+              <div>
+                <p class="detalle-ruta-intro">Una ruta para consolidar tu lógica y crear aplicaciones frontend más robustas.</p>
+                <ul>
+                  <li>JavaScript, DOM y eventos reales.</li>
+                  <li>React, TypeScript y rendimiento.</li>
+                  <li>Patrones y arquitectura frontend.</li>
+                </ul>
+                <a href="detalles-javascript.html">Explorar JavaScript <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
           </div>
         </article>
       </div>

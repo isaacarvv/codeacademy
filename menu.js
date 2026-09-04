@@ -32,4 +32,66 @@ document.addEventListener('DOMContentLoaded', () => {
       if (evento.key === 'Escape') cerrarMenu();
     });
   });
+
+  /* Revela secciones y tarjetas al entrar en el área visible. */
+  const elementosAnimados = document.querySelectorAll([
+    '.hero-prueba',
+    '.beneficios-prueba',
+    '.rutas-prueba',
+    '.cursos-prueba',
+    '.contenido-nosotros > section',
+    '.contenido-ruta > section',
+    '.catalogo-cursos-v2 .filtros-v2',
+    '.catalogo-cursos-v2 .catalogo-v2',
+    '.sidebar-aula',
+    '.contenido-leccion',
+    '.pie-prueba',
+    '.tarjeta-beneficio-prueba',
+    '.tarjeta-ruta-prueba',
+    '.tarjeta-curso-prueba',
+    '.tarjeta-catalogo-v2',
+    '.sobre-pilares article',
+    '.pasos-metodo article',
+    '.paso-ruta'
+  ].join(','));
+
+  const reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  elementosAnimados.forEach((elemento, indice) => {
+    elemento.classList.add('animar-entrada');
+    elemento.style.setProperty('--retraso-entrada', `${(indice % 5) * 65}ms`);
+  });
+
+  if (reducirMovimiento || !('IntersectionObserver' in window)) {
+    elementosAnimados.forEach((elemento) => elemento.classList.add('entrada-visible'));
+    return;
+  }
+
+  const observador = new IntersectionObserver((entradas, instancia) => {
+    entradas.forEach((entrada) => {
+      if (!entrada.isIntersecting) return;
+      entrada.target.classList.add('entrada-visible');
+      instancia.unobserve(entrada.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -36px' });
+
+  elementosAnimados.forEach((elemento) => observador.observe(elemento));
+
+  /* Rutas de aprendizaje: muestra contexto sin sacar al usuario de la portada. */
+  document.querySelectorAll('.boton-expandir-ruta').forEach((boton) => {
+    boton.addEventListener('click', () => {
+      const tarjetaActual = boton.closest('.ruta-expandible');
+      const seAbrira = !tarjetaActual.classList.contains('ruta-abierta');
+
+      document.querySelectorAll('.ruta-expandible.ruta-abierta').forEach((tarjeta) => {
+        tarjeta.classList.remove('ruta-abierta');
+        tarjeta.querySelector('.boton-expandir-ruta')?.setAttribute('aria-expanded', 'false');
+      });
+
+      if (seAbrira) {
+        tarjetaActual.classList.add('ruta-abierta');
+        boton.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 });
